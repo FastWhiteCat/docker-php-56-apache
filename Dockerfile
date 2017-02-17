@@ -40,3 +40,8 @@ RUN curl -sS https://getcomposer.org/installer | \
       --install-dir=/usr/local/bin \
       --filename=composer \
       --version=1.1.2
+
+RUN pecl install apcu-4.0.11 \
+     && docker-php-ext-enable apcu
+
+RUN a2enmod rewrite
