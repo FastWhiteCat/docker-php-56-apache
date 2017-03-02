@@ -17,6 +17,7 @@ RUN apt-get update \
 	g++\
 	unzip\
 	mysql-client\
+	openssl \
 	cron \
 	sudo \
 	vim \
@@ -45,3 +46,4 @@ RUN pecl install apcu-4.0.11 \
      && docker-php-ext-enable apcu
 
 RUN a2enmod rewrite
+RUN a2enmod ssl
