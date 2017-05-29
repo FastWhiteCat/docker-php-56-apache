@@ -21,6 +21,7 @@ RUN apt-get update \
 	cron \
 	sudo \
 	vim \
+	supervisor\
   && apt-get clean
 
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
